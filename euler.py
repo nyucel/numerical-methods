@@ -23,3 +23,9 @@ while(e!=e1):
     e1 += Decimal(1/factorial(n))
     n += 1
 print(e)
+
+# Burada da yukarıda yapılan işlemin her bir iterasyonunda elde edilen çıktılar görünmektedir.
+e = 0
+for n in range(20):
+    e += Decimal(1/factorial(n))
+    print(e)
