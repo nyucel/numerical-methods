@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-
 dosya=open("katsayilar.txt")
 matris = []
 
@@ -18,5 +15,16 @@ for n in range(boyut):
         kat = float(matris[n+p][n])
         for q in range(boyut+1):
             matris[n+p][q]=float(matris[n+p][q])-float(matris[n][q])*(kat/float(matris[n][n]))
+
+for m in range(boyut-1,0,-1):
+    for n in range(boyut-1,0,-1):
+        if(matris[n][m]==0):
+            continue
+        for p in range(1,boyut):
+            if(matris[n-p][m]==0):
+                continue
+            kat=float(matris[n-p][m])/float(matris[boyut-p][boyut-p])
+            for q in range(boyut+1):
+                matris[n-p][q]=float(matris[n-p][q])-float(matris[n][q])*(kat/float(matris[n][n]))
 
 print(matris)
