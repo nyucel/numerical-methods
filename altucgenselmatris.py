@@ -30,3 +30,5 @@ for n in range(boyut-1,-1,-1):
             matris[n-p][q] = float(matris[n-p][q])-float(matris[n][q])*(kat/float(matris[n][n]))
 print(matris)
 
+
+
