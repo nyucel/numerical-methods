@@ -19,4 +19,13 @@ for n in range(boyut):
         for q in range(boyut+1):
             matris[n+p][q]=float(matris[n+p][q])-float(matris[n][q])*(kat/float(matris[n][n]))
 
-print(matris)
+for n in range(boyut-1,-1,-1):
+     for m in range(1,n+1):
+         kat = float(matris[n-m][n])
+         for p in range(boyut+1):
+             matris[n-m][p] = float(matris[n-m][p])-float(matris[n][p])*(kat/float(matris[n][n]))
+ 
+
+print(matris[0])
+print(matris[1])
+print(matris[2])
