@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import sys
-dosya=open("katsayilar2.txt")
+dosya=open("katsayilar.txt")
 matris = []
 
 for line in dosya.readlines():
