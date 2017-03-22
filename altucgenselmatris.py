@@ -31,5 +31,7 @@ for n in range(boyut-1,0,-1):
     for i in range(boyut):
         if(i==n):
             break
+        a=float(matris[i][n])
         matris[i][n]=float(matris[i][n])-(kat*float(matris[i][n]))
+        matris[i][boyut]=float(matris[i][boyut])-(a*float(matris[n][boyut]))
 print(matris)
