@@ -16,7 +16,7 @@ def fy(x,y):
 def f(x,y):
     return x**2 + x*y-10
 def g(x,y):
-    return y+3*x*y*2-57
+    return y+3*x*y**2-57
 def gx(x,y):
     return 3*y**2
 def gy(x,y):
