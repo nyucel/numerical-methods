@@ -1,11 +1,9 @@
 def liste_oku():
-    listeokunan = []
     dosya = open("katsayilar.txt")
     for line in dosya.readlines():
         line = line.split(' ')
-        listeokunan.append(line)
     dosya.close()
-    return listeokunan
+    return line
 
 
 def polinom_bol(k, a):
@@ -14,8 +12,8 @@ def polinom_bol(k, a):
     if(a.length > 2):
         b[i] = a[i]
         while i < (a.length - 1):
-            b[i] = a[i] + a[i - 1] * k
             i = i + 1
+            b[i] = a[i] + a[i - 1] * k
         return b
 
 
