@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+#   u**2-2*v**2=a**2
+#   u+v=2
+#   a**2-2*a-u=0
+
+def fa(a,u):
+    return float((a**2-2*a+u))
+
+def fai(a,u):
+    return float((2*a-2))
+
+def abul(a,u):
+    for i in range(100):
+        a=a-fa(a,u)/fai(a,u)
+    return float(a)
+
+a=float(input("a için bir başlangıc değeri giriniz"))
+for i in range(100):
+    u=(a**2-2*a)
+    v=2-u
+    a=abul(a,u)
+    print ("u:",u,"v:",v,"a:",a)   
