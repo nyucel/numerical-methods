@@ -9,6 +9,7 @@ for line in dosya.readlines():
     degerler.append(line)
 dosya.close()
 
+
 x = float(input("hangi değerin hesaplanmasını istiyorsunuz: "))
 
 xi = degerler[0]
