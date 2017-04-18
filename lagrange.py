@@ -5,7 +5,7 @@ dosya=open("lagrange.txt")
 degerler = []
 
 for line in dosya.readlines():
-    line = line.rstrip('\n').split()
+    line = line.rstrip('\n').split(' ')
     degerler.append(line)
 dosya.close()
 
@@ -28,3 +28,4 @@ for i in range(n):
     sonuc += ekle
 
 print ("X = ", x, " sonuc = ", sonuc)
+    
