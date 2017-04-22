@@ -9,5 +9,16 @@ for line in dosya.readlines():
     degerler.append(line)
 dosya.close()
 
-x = int(input("hangi değerin hesaplanmasını istiyorsunuz: "))
+x = float(input("hangi değerin hesaplanmasını istiyorsunuz: "))
 
+sonuc,boyut,a,b= 0,len(degerler[0]),0,0
+for i in range(boyut):
+    L = 1
+    for j in range(boyut):
+        if(a == j) : continue
+        L *= (x-int(degerler[0][j]))/(int(degerler[0][a])-int(degerler[0][j]))
+    if(b != boyut): L *= int(degerler[1][b])
+    sonuc += L
+    b,a = b+1,a+1
+
+print(sonuc)
