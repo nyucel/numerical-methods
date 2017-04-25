@@ -6,8 +6,25 @@ degerler = []
 
 for line in dosya.readlines():
     line = line.rstrip('\n').split(' ')
+    line = [float(i) for i in line]
     degerler.append(line)
 dosya.close()
+arasonuc,sonuc,boyut,a,sf = 1,0,len(degerler[0]),[],[]
 
 x = int(input("hangi değerin hesaplanmasını istiyorsunuz: "))
 
+for i in degerler[1]:
+    a.append(i)
+sf.append(a)
+
+for i in range(boyut-1):
+    a = []
+    for j in range(len(sf[i])-1):
+        a.append((sf[i][j]-sf[i][j+1])/(degerler[0][j]-degerler[0][j+i+1]))
+    sf.append(a)
+    
+for i in range(1,boyut):
+    arasonuc *= x-degerler[0][i-1]
+    sonuc += arasonuc*sf[i][0]
+sonuc += degerler[1][0]
+print sonuc
