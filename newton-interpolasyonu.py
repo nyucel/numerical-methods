@@ -42,19 +42,4 @@ for i in range(sutun-1):
     
    
 print(sonuc)
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+ 
