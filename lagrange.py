@@ -11,3 +11,18 @@ dosya.close()
 
 x = int(input("hangi değerin hesaplanmasını istiyorsunuz: "))
 
+sonuc=0
+ boyut1=len(degerler)
+ boyut2=len(degerler[0])
+ 
+ for i in range(boyut2):
+     ust=1
+     alt=1
+     for j in range(boyut2):
+         if(i==j):
+             continue
+         else:
+             ust=ust*(x-degerler[0][j])
+             alt=alt*(degerler[0][i]-degerler[0][k])
+             sonuc=sonuc+((ust/alt)*degerler[1][i])
+ print(sonuc)
