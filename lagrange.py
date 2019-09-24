@@ -10,4 +10,3 @@ for line in dosya.readlines():
 dosya.close()
 
 x = int(input("hangi değerin hesaplanmasını istiyorsunuz: "))
-
