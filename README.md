@@ -1,2 +1,2 @@
 # numerical-methods
-Sayısal yöntemler dersi için kod örnekleri
+Code examples for the numerical methods course 
